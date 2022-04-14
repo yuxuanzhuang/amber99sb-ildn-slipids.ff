@@ -1,0 +1,456 @@
+[ bondedtypes ]
+; Column 1 : default bondtype
+; Column 2 : default angletype
+; Column 3 : default proper dihedraltype
+; Column 4 : default improper dihedraltype
+; Column 5 : This controls the generation of dihedrals from the bonding.
+;            All possible dihedrals are generated automatically. A value of
+;            1 here means that all these are retained. A value of
+;            0 here requires generated dihedrals be removed if
+;              * there are any dihedrals on the same central atoms
+;                specified in the residue topology, or
+;              * there are other identical generated dihedrals
+;                sharing the same central atoms, or
+;              * there are other generated dihedrals sharing the
+;                same central bond that have fewer hydrogen atoms
+; Column 6 : number of neighbors to exclude from non-bonded interactions
+; Column 7 : 1 = generate 1,4 interactions between pairs of hydrogen atoms
+;            0 = do not generate such
+; Column 8 : 1 = remove proper dihedrals if found centered on the same
+;                bond as an improper dihedral
+;            0 = do not generate such
+; bonds  angles  dihedrals  impropers all_dihedrals nrexcl HH14 RemoveDih
+     1       5          9          2        1         3      1     0
+
+[ POPC ]
+ [ atoms ]
+        N       NTL     -0.60   0
+        C12     CTL2    -0.10   1
+        C13     CTL5    -0.35   2
+        C14     CTL5    -0.35   3
+        C15     CTL5    -0.35   4
+        H12A    HL      0.25    5
+        H12B    HL      0.25    6
+        H13A    HL      0.25    7
+        H13B    HL      0.25    8
+        H13C    HL      0.25    9
+        H14A    HL      0.25    10
+        H14B    HL      0.25    11
+        H14C    HL      0.25    12
+        H15A    HL      0.25    13
+        H15B    HL      0.25    14
+        H15C    HL      0.25    15
+        C11     CTL2    -0.08   16
+        H11A    HAL2    0.09    17
+        H11B    HAL2    0.09    18
+        P       PL      1.50    19
+        O13     O2L     -0.78   20
+        O14     O2L     -0.78   21
+        O12     OSLP    -0.57   22
+        O11     OSLP    -0.57   23
+        C1      CTL2    -0.08   24
+        HA      HAL2    0.09    25
+        HB      HAL2    0.09    26
+        C2      CTL1    0.17    27
+        HS      HAL1    0.09    28
+        O21     OSL     -0.49   29
+        C21     CL      0.90    30
+        O22     OBL     -0.63   31
+        C22     CTL2    -0.22   32
+        H2R     HAL2    0.09    33
+        H2S     HAL2    0.09    34
+        C3      CTL2    0.08    35
+        HX      HAL2    0.09    36
+        HY      HAL2    0.09    37
+        O31     OSL     -0.49   38
+        C31     CL      0.90    39
+        O32     OBL     -0.63   40
+        C32     CTL2    -0.22   41
+        H2X     HAL2    0.09    42
+        H2Y     HAL2    0.09    43
+        C23     CTL2    -0.18   44
+        H3R     HAL2    0.09    45
+        H3S     HAL2    0.09    46
+        C24     CTL2    -0.18   47
+        H4R     HAL2    0.09    48
+        H4S     HAL2    0.09    49
+        C25     CTL2    -0.18   50
+        H5R     HAL2    0.09    51
+        H5S     HAL2    0.09    52
+        C26     CTL2    -0.18   53
+        H6R     HAL2    0.09    54
+        H6S     HAL2    0.09    55
+        C27     CTL2    -0.18   56
+        H7R     HAL2    0.09    57
+        H7S     HAL2    0.09    58
+        C28     CTL2    -0.18   59
+        H8R     HAL2    0.09    60
+        H8S     HAL2    0.09    61
+        C29     CEL1    -0.15   62
+        H91     HEL1    0.15    63
+        C210    CEL1    -0.15   64
+        H101    HEL1    0.15    65
+        C211    CTL2    -0.18   66
+        H11R    HAL2    0.09    67
+        H11S    HAL2    0.09    68
+        C212    CTL2    -0.18   69
+        H12R    HAL2    0.09    70
+        H12S    HAL2    0.09    71
+        C213    CTL2    -0.18   72
+        H13R    HAL2    0.09    73
+        H13S    HAL2    0.09    74
+        C214    CTL2    -0.18   75
+        H14R    HAL2    0.09    76
+        H14S    HAL2    0.09    77
+        C215    CTL2    -0.18   78
+        H15R    HAL2    0.09    79
+        H15S    HAL2    0.09    80
+        C216    CTL2    -0.18   81
+        H16R    HAL2    0.09    82
+        H16S    HAL2    0.09    83
+        C217    CTL2    -0.18   84
+        H17R    HAL2    0.09    85
+        H17S    HAL2    0.09    86
+        C218    CTL3    -0.27   87
+        H18R    HAL3    0.09    88
+        H18S    HAL3    0.09    89
+        H18T    HAL3    0.09    90
+        C33     CTL2    -0.18   91
+        H3X     HAL2    0.09    92
+        H3Y     HAL2    0.09    93
+        C34     CTL2    -0.18   94
+        H4X     HAL2    0.09    95
+        H4Y     HAL2    0.09    96
+        C35     CTL2    -0.18   97
+        H5X     HAL2    0.09    98
+        H5Y     HAL2    0.09    99
+        C36     CTL2    -0.18   100
+        H6X     HAL2    0.09    101
+        H6Y     HAL2    0.09    102
+        C37     CTL2    -0.18   103
+        H7X     HAL2    0.09    104
+        H7Y     HAL2    0.09    105
+        C38     CTL2    -0.18   106
+        H8X     HAL2    0.09    107
+        H8Y     HAL2    0.09    108
+        C39     CTL2    -0.18   109
+        H9X     HAL2    0.09    110
+        H9Y     HAL2    0.09    111
+        C310    CTL2    -0.18   112
+        H10X    HAL2    0.09    113
+        H10Y    HAL2    0.09    114
+        C311    CTL2    -0.18   115
+        H11X    HAL2    0.09    116
+        H11Y    HAL2    0.09    117
+        C312    CTL2    -0.18   118
+        H12X    HAL2    0.09    119
+        H12Y    HAL2    0.09    120
+        C313    CTL2    -0.18   121
+        H13X    HAL2    0.09    122
+        H13Y    HAL2    0.09    123
+        C314    CTL2    -0.18   124
+        H14X    HAL2    0.09    125
+        H14Y    HAL2    0.09    126
+        C315    CTL2    -0.18   127
+        H15X    HAL2    0.09    128
+        H15Y    HAL2    0.09    129
+        C316    CTL3    -0.27   130
+        H16X    HAL3    0.09    131
+        H16Y    HAL3    0.09    132
+        H16Z    HAL3    0.09    133
+ [ bonds ]
+        N       C13
+        N       C14
+        N       C15
+        C13     H13A
+        C13     H13B
+        C13     H13C
+        C14     H14A
+        C14     H14B
+        C14     H14C
+        C15     H15A
+        C15     H15B
+        C15     H15C
+        N       C12
+        C12     H12A
+        C12     H12B
+        C12     C11
+        C11     H11A
+        C11     H11B
+        C11     O12
+        O11     C1
+        O12     P
+        P       O11
+        P       O13
+        P       O14
+        C1      HA
+        C1      HB
+        C1      C2
+        C2      HS
+        C2      C3
+        C2      O21
+        C3      HX
+        C3      HY
+        C3      O31
+        O21     C21
+        C21     C22
+        C21     O22
+        C22     H2R
+        C22     H2S
+        C22     C23
+        C23     H3R
+        C23     H3S
+        C23     C24
+        C24     H4R
+        C24     H4S
+        C24     C25
+        C25     H5R
+        C25     H5S
+        C25     C26
+        C26     H6R
+        C26     H6S
+        C26     C27
+        C27     H7R
+        C27     H7S
+        C27     C28
+        C28     H8R
+        C28     H8S
+        C28     C29
+        C29     H91
+        C29     C210
+        C210    H101
+        C210    C211
+        C211    H11R
+        C211    H11S
+        C211    C212
+        C212    H12R
+        C212    H12S
+        C212    C213
+        C213    H13R
+        C213    H13S
+        C213    C214
+        C214    H14R
+        C214    H14S
+        C214    C215
+        C215    H15R
+        C215    H15S
+        C215    C216
+        C216    H16R
+        C216    H16S
+        C216    C217
+        C217    H17R
+        C217    H17S
+        C217    C218
+        C218    H18R
+        C218    H18S
+        C218    H18T
+        O31     C31
+        C31     C32
+        C31     O32
+        C32     H2X
+        C32     H2Y
+        C32     C33
+        C33     H3X
+        C33     H3Y
+        C33     C34
+        C34     H4X
+        C34     H4Y
+        C34     C35
+        C35     H5X
+        C35     H5Y
+        C35     C36
+        C36     H6X
+        C36     H6Y
+        C36     C37
+        C37     H7X
+        C37     H7Y
+        C37     C38
+        C38     H8X
+        C38     H8Y
+        C38     C39
+        C39     H9X
+        C39     H9Y
+        C39     C310
+        C310    H10X
+        C310    H10Y
+        C310    C311
+        C311    H11X
+        C311    H11Y
+        C311    C312
+        C312    H12X
+        C312    H12Y
+        C312    C313
+        C313    H13X
+        C313    H13Y
+        C313    C314
+        C314    H14X
+        C314    H14Y
+        C314    C315
+        C315    H15X
+        C315    H15Y
+        C315    C316
+        C316    H16X
+        C316    H16Y
+        C316    H16Z
+ [ impropers ]
+        C21     O21     C22     O22
+        C31     O31     C32     O32
+
+[ CHO ] ; Erik Lindahl 2019-03-14, from slipids
+ [ atoms ]
+      CBC       CTL1	0.2347   1
+      OAW       OHL    -0.6278   2
+      HAW       HOL     0.3768   3
+      HBC       HAL1    0.0954   4
+      CAV       CTL2   -0.2235   5
+      HAV2      HAL2    0.0926   6
+      HAV3      HAL2    0.0926   7
+      CAZ       CEL1   -0.1136   8
+      CAI       CEL1   -0.2075   9
+      HAI       HEL1    0.1137  10
+      CAK       CTL2   -0.0260  11
+      HAK3      HAL2    0.0353  12
+      HAK2      HAL2    0.0353  13
+      CBD       CTL1    0.0027  14
+      HBD       HAL1    0.0573  15
+      CBG       CTL1    0.0156  16
+      HBG       HAL1    0.0144  17
+      CAQ       CTL2   -0.0951  18
+      HAQ2      HAL2    0.0211  19
+      HAQ3      HAL2    0.0211  20
+      CAP       CTL2   -0.0763  21
+      HAP2      HAL2    0.0275  22
+      HAP3      HAL2    0.0275  23
+      CBE       CTL1    0.0375  24
+      HBE       HAL1    0.0089  25
+      CBI       CTL1    0.0856  26
+      CAE       CTL3   -0.0864  27
+      HAE1      HAL3    0.0129  28
+      HAE2      HAL3    0.0129  29
+      HAE3      HAL3    0.0129  30
+      CAU       CTL2   -0.0529  31
+      HAU2      HAL2    0.0010  32
+      HAU3      HAL2    0.0010  33
+      CAS       CTL2   -0.0632  34
+      HAS2      HAL2    0.0285  35
+      HAS3      HAL2    0.0285  36
+      CBF       CTL1    0.0322  37
+      HBF       HAL1    0.0221  38
+      CBH       CTL1    0.0541  39
+      CAD       CTL3   -0.0532  40
+      HAD1      HAL3    0.0173  41
+      HAD2      HAL3    0.0173  42
+      HAD3      HAL3    0.0173  43
+      CAT       CTL2   -0.0087  44
+      HAT2      HAL2    0.0108  45
+      HAT3      HAL2    0.0108  46
+      CAR       CTL2   -0.1137  47
+      HAR2      HAL2    0.0401  48
+      HAR3      HAL2    0.0401  49
+      CBB       CTL2    0.0552  50
+      HBB       HAL2    0.0192  51
+      CAC       CTL3   -0.2180  52
+      HAC1      HAL3    0.0546  53
+      HAC2      HAL3    0.0546  54
+      HAC3      HAL3    0.0546  55
+      CAO       CTL2   -0.0268  56
+      HAO2      HAL2   -0.0007  57
+      HAO3      HAL2   -0.0007  58
+      CAJ       CTL2   -0.0050  59
+      HAJ2      HAL2    0.0031  60
+      HAJ3      HAL2    0.0031  61
+      CAN       CTL2   -0.0910  62
+      HAN2      HAL2    0.0279  63
+      HAN3      HAL2    0.0279  64
+      CBA       CTL1    0.2015  65
+      HBA       HAL1   -0.0039  66
+      CAA       CTL3   -0.2338  67
+      HAA1      HAL3    0.05075 68
+      HAA2      HAL3    0.05075 69
+      HAA3      HAL3    0.05075 70 
+      CAB       CTL3   -0.2338  71 
+      HAB1      HAL3    0.05075 72
+      HAB2      HAL3    0.05075 73
+      HAB3      HAL3    0.05075 74
+[ bonds ]
+   CBC    OAW
+   CBC    HBC
+   CBC    CAV
+   CBC    CAR
+   OAW    HAW
+   CAV    HAV2
+   CAV    HAV3
+   CAV    CAZ
+   CAZ    CAI
+   CAZ    CBH
+   CAI    HAI
+   CAI    CAK
+   CAK    HAK2
+   CAK    HAK3
+   CAK    CBD
+   CBD    HBD
+   CBD    CBG
+   CBD    CBF
+   CBG    HBG
+   CBG    CAQ
+   CBG    CBI
+   CAQ    HAQ2
+   CAQ    HAQ3
+   CAQ    CAP
+   CAP    HAP2
+   CAP    HAP3
+   CAP    CBE
+   CBE    HBE
+   CBE    CBI
+   CBE    CBB
+   CBI    CAE
+   CBI    CAU
+   CAE    HAE1
+   CAE    HAE2
+   CAE    HAE3
+   CAU    HAU2
+   CAU    HAU3
+   CAU    CAS
+   CAS    HAS2
+   CAS    HAS3
+   CAS    CBF
+   CBF    HBF
+   CBF    CBH
+   CBH    CAD
+   CBH    CAT
+   CAD    HAD1
+   CAD    HAD2
+   CAD    HAD3
+   CAT    HAT2
+   CAT    HAT3
+   CAT    CAR
+   CAR    HAR2
+   CAR    HAR3
+   CBB    HBB
+   CBB    CAC
+   CBB    CAO
+   CAC    HAC1
+   CAC    HAC2
+   CAC    HAC3
+   CAO    HAO2
+   CAO    HAO3
+   CAO    CAJ
+   CAJ    HAJ2
+   CAJ    HAJ3
+   CAJ    CAN
+   CAN    HAN2
+   CAN    HAN3
+   CAN    CBA
+   CBA    HBA
+   CBA    CAA
+   CBA    CAB
+   CAA    HAA1
+   CAA    HAA2
+   CAA    HAA3
+   CAB    HAB1
+   CAB    HAB2
+   CAB    HAB3
+
+
+
+

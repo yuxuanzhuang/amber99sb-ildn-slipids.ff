@@ -1,0 +1,218 @@
+[ bondedtypes ]
+; Column 1 : default bondtype
+; Column 2 : default angletype
+; Column 3 : default proper dihedraltype
+; Column 4 : default improper dihedraltype
+; Column 5 : This controls the generation of dihedrals from the bonding.
+;            All possible dihedrals are generated automatically. A value of
+;            1 here means that all these are retained. A value of
+;            0 here requires generated dihedrals be removed if
+;              * there are any dihedrals on the same central atoms
+;                specified in the residue topology, or
+;              * there are other identical generated dihedrals
+;                sharing the same central atoms, or
+;              * there are other generated dihedrals sharing the
+;                same central bond that have fewer hydrogen atoms
+; Column 6 : number of neighbors to exclude from non-bonded interactions
+; Column 7 : 1 = generate 1,4 interactions between pairs of hydrogen atoms
+;            0 = do not generate such
+; Column 8 : 1 = remove proper dihedrals if found centered on the same
+;                bond as an improper dihedral
+;            0 = do not generate such
+; bonds  angles  dihedrals  impropers all_dihedrals nrexcl HH14 RemoveDih
+     1       1          9          4        1         3      1     0
+
+[ NCT ] ; Erik Lindahl 2019-03-14, from acpype
+ [ atoms ]
+        C1	CA     -0.189600  1
+        C2	CA     -0.095000  2
+        H2	HA      0.134000  3
+        C3	CA     -0.250300  4
+        C4	CA      0.391200  5
+        H3      HA      0.141000  6
+        H4	H4      0.020100  7
+         N	NB     -0.670000  8
+         C	CA      0.421200  9
+         H	H4      0.035100  10
+        C5	CT      0.223800  11
+        N1	N3     -0.731600  12
+        H5	H1      0.036700  13
+        C9	CT      0.159100  14
+       H92	H1      0.033367  15
+       H93	H1      0.033367  16
+       H91	H1      0.033367  17
+        C8	CT      0.161800  18
+        C7	CT     -0.093400  19
+       H83	H1      0.042700  20
+       H82	H1      0.042700  21
+       H72	HC      0.048700  22
+       H73	HC      0.048700  23
+        C6	CT     -0.084400  24
+       H63	HC      0.053700  25
+       H62	HC      0.053700  26
+[ bonds ]
+ C1   C2       1.3984e-01    3.8585e+05
+ C1   C        1.3984e-01    3.8585e+05
+ C1   C5       1.5156e-01    2.6861e+05
+ C2   H2       1.0860e-01    2.8937e+05
+ C2   C3       1.3984e-01    3.8585e+05
+ C3   C4       1.3984e-01    3.8585e+05
+ C3   H3       1.0860e-01    2.8937e+05
+ C4   H4       1.0890e-01    2.8577e+05
+ C4   N        1.3390e-01    4.0836e+05
+ N    C        1.3390e-01    4.0836e+05
+ C    H        1.0890e-01    2.8577e+05
+ C5   N1       1.4647e-01    2.7271e+05
+ C5   H5       1.0969e-01    2.7665e+05
+ C5   C6       1.5375e-01    2.5179e+05
+ N1   C9       1.4647e-01    2.7271e+05
+ N1   C8       1.4647e-01    2.7271e+05
+ C9   H92      1.0969e-01    2.7665e+05
+ C9   H93      1.0969e-01    2.7665e+05
+ C9   H91      1.0969e-01    2.7665e+05
+ C8   C7       1.5375e-01    2.5179e+05
+ C8   H83      1.0969e-01    2.7665e+05
+ C8   H82      1.0969e-01    2.7665e+05
+ C7   H72      1.0969e-01    2.7665e+05
+ C7   H73      1.0969e-01    2.7665e+05
+ C7   C6       1.5375e-01    2.5179e+05
+ C6   H63      1.0969e-01    2.7665e+05
+ C6   H62      1.0969e-01    2.7665e+05
+[ angles ]
+;   ai     aj     ak    funct   theta         cth
+    C1     C2     H2          1.1988e+02    4.0317e+02 
+    C1     C2     C3          1.2002e+02    5.5748e+02 
+    C1      C      N          1.2294e+02    5.7597e+02 
+    C1      C      H          1.2034e+02    4.0217e+02
+    C1     C5     N1          1.1216e+02    5.5413e+02
+    C1     C5     H5          1.0956e+02    3.9321e+02
+    C1     C5     C6          1.1207e+02    5.2844e+02
+    C2     C1      C          1.2002e+02    5.5748e+02
+    C2     C1     C5          1.2077e+02    5.3162e+02
+    C2     C3     C4          1.2002e+02    5.5748e+02
+    C2     C3     H3          1.1988e+02    4.0317e+02
+    H2     C2     C3          1.1988e+02    4.0317e+02
+    C3     C4     H4          1.2034e+02    4.0217e+02
+    C3     C4      N          1.2294e+02    5.7597e+02
+    C4     C3     H3          1.1988e+02    4.0317e+02
+    C4      N      C          1.1722e+02    5.7195e+02
+    H4     C4      N          1.1603e+02    4.3413e+02
+     N      C      H          1.1603e+02    4.3413e+02
+     C     C1     C5          1.2077e+02    5.3162e+02
+    C5     N1     C9          1.1235e+02    5.3405e+02
+    C5     N1     C8          1.1235e+02    5.3405e+02
+    C5     C6     C7          1.1151e+02    5.2601e+02
+    C5     C6    H63          1.0980e+02    3.8777e+02
+    C5     C6    H62          1.0980e+02    3.8777e+02
+    N1     C5     H5          1.0988e+02    4.1447e+02
+    N1     C5     C6          1.1104e+02    5.5246e+02
+    N1     C9    H92          1.0988e+02    4.1447e+02
+    N1     C9    H93          1.0988e+02    4.1447e+02
+    N1     C9    H91          1.0988e+02    4.1447e+02
+    N1     C8     C7          1.1104e+02    5.5246e+02
+    N1     C8    H83          1.0988e+02    4.1447e+02
+    N1     C8    H82          1.0988e+02    4.1447e+02
+    H5     C5     C6          1.0956e+02    3.8819e+02
+    C9     N1     C8          1.1235e+02    5.3405e+02
+   H92     C9    H93          1.0846e+02    3.2836e+02
+   H92     C9    H91          1.0846e+02    3.2836e+02
+   H93     C9    H91          1.0846e+02    3.2836e+02
+    C8     C7    H72          1.0980e+02    3.8777e+02
+    C8     C7    H73          1.0980e+02    3.8777e+02
+    C8     C7     C6          1.1151e+02    5.2601e+02
+    C7     C8    H83          1.0956e+02    3.8819e+02
+    C7     C8    H82          1.0956e+02    3.8819e+02
+    C7     C6    H63          1.0980e+02    3.8777e+02
+    C7     C6    H62          1.0980e+02    3.8777e+02
+   H83     C8    H82          1.0846e+02    3.2836e+02
+   H72     C7    H73          1.0758e+02    3.2970e+02
+   H72     C7     C6          1.0980e+02    3.8777e+02
+   H73     C7     C6          1.0980e+02    3.8777e+02
+   H63     C6    H62          1.0758e+02    3.2970e+02
+[ dihedrals ]
+;   C1      j      k      l   
+    C1     C2     C3     C4         180.00  15.16700   2
+    C1     C2     C3     H3         180.00  15.16700   2
+    C1      C      N     C4         180.00  20.08320   2
+    C1     C5     N1     C9           0.00   1.25520   3
+    C1     C5     N1     C8           0.00   1.25520   3
+    C1     C5     C6     C7           0.00   0.65084   3
+    C1     C5     C6    H63           0.00   0.65084   3
+    C1     C5     C6    H62           0.00   0.65084   3
+    C2     C1      C      N         180.00  15.16700   2
+    C2     C1      C      H         180.00  15.16700   2
+    C2     C1     C5     N1           0.00   0.00000   0
+    C2     C1     C5     H5           0.00   0.00000   0
+    C2     C1     C5     C6           0.00   0.00000   0
+    C2     C3     C4     H4         180.00  15.16700   2
+    C2     C3     C4      N         180.00  15.16700   2
+    H2     C2     C3     C4         180.00  15.16700   2
+    H2     C2     C3     H3         180.00  15.16700   2
+    C3     C4      N      C         180.00  20.08320   2
+    C4      N      C      H         180.00  20.08320   2
+    H3     C3     C4     H4         180.00  15.16700   2
+    H3     C3     C4      N         180.00  15.16700   2
+    H4     C4      N      C         180.00  20.08320   2
+     C     C1     C2     H2         180.00  15.16700   2
+     C     C1     C2     C3         180.00  15.16700   2
+     C     C1     C5     N1           0.00   0.00000   0
+     C     C1     C5     H5           0.00   0.00000   0
+     C     C1     C5     C6           0.00   0.00000   0
+    C5     C1     C2     H2         180.00  15.16700   2
+    C5     C1     C2     C3         180.00  15.16700   2
+    C5     C1      C      N         180.00  15.16700   2
+    C5     C1      C      H         180.00  15.16700   2
+    C5     N1     C9    H92           0.00   1.25520   3
+    C5     N1     C9    H93           0.00   1.25520   3
+    C5     N1     C9    H91           0.00   1.25520   3
+    C5     N1     C8     C7           0.00   1.25520   3
+    C5     N1     C8     C7         180.00   2.00832   2
+    C5     N1     C8    H83           0.00   1.25520   3
+    C5     N1     C8    H82           0.00   1.25520   3
+    C5     C6     C7     C8           0.00   0.75312   3
+    C5     C6     C7     C8         180.00   0.83680   1
+    C5     C6     C7     C8         180.00   1.04600   2
+    C5     C6     C7    H72           0.00   0.66944   3
+    C5     C6     C7    H73           0.00   0.66944   3
+    N1     C5     C6     C7           0.00   0.65084   3
+    N1     C5     C6    H63           0.00   0.65084   3
+    N1     C5     C6    H62           0.00   0.65084   3
+    N1     C8     C7    H72           0.00   0.65084   3
+    N1     C8     C7    H73           0.00   0.65084   3
+    N1     C8     C7     C6           0.00   0.65084   3
+    H5     C5     N1     C9           0.00   1.25520   3
+    H5     C5     N1     C8           0.00   1.25520   3
+    H5     C5     C6     C7           0.00   0.65084   3
+    H5     C5     C6    H63           0.00   0.65084   3
+    H5     C5     C6    H62           0.00   0.65084   3
+    C9     N1     C5     C6           0.00   1.25520   3
+    C9     N1     C5     C6         180.00   2.00832   2
+    C9     N1     C8     C7           0.00   1.25520   3
+    C9     N1     C8     C7         180.00   2.00832   2
+    C9     N1     C8    H83           0.00   1.25520   3
+    C9     N1     C8    H82           0.00   1.25520   3
+   H92     C9     N1     C8           0.00   1.25520   3
+   H93     C9     N1     C8           0.00   1.25520   3
+   H91     C9     N1     C8           0.00   1.25520   3
+    C8     N1     C5     C6           0.00   1.25520   3
+    C8     N1     C5     C6         180.00   2.00832   2
+    C8     C7     C6    H63           0.00   0.66944   3
+    C8     C7     C6    H62           0.00   0.66944   3
+   H83     C8     C7    H72           0.00   0.65084   3
+   H83     C8     C7    H73           0.00   0.65084   3
+   H83     C8     C7     C6           0.00   0.65084   3
+   H82     C8     C7    H72           0.00   0.65084   3
+   H82     C8     C7    H73           0.00   0.65084   3
+   H82     C8     C7     C6           0.00   0.65084   3
+   H72     C7     C6    H63           0.00   0.62760   3
+   H72     C7     C6    H62           0.00   0.62760   3
+   H73     C7     C6    H63           0.00   0.62760   3
+   H73     C7     C6    H62           0.00   0.62760   3
+[ impropers ]
+ C1  C3  C2  H2         180.00   4.60240   2
+ C1  H   C   N          180.00   4.60240   2
+ C2  C4  C3  H3         180.00   4.60240   2
+ C3  H4  C4  N          180.00   4.60240   2
+ C5  C1  C   C2         180.00   4.60240   2
+
+
